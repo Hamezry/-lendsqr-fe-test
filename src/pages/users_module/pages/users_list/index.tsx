@@ -8,7 +8,6 @@ import { IoDocumentTextOutline } from 'react-icons/io5';
 import { FaCoins, FaUserCheck, FaUserTimes, FaRegEye } from 'react-icons/fa';
 import { RxDotsVertical } from 'react-icons/rx';
 import { useNavigate } from 'react-router-dom';
-import Tables from '../../../../components/table';
 import {
   commaFormatter,
   dateTimeFormatter,
