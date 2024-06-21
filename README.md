@@ -102,7 +102,7 @@ To carry out automated tests
 
 Check out the [Figma](https://www.google.com/url?q=https://www.figma.com/file/ZKILoCoIoy1IESdBpq3GNC/Frontend&sa=D&source=editors&ust=1718978235142938&usg=AOvVaw2YvPRmOuNwlYMf1L6-naQf)
 
-Visit the live website [here](james-okafor-lendsqr-fe-test.vercel.app)
+Visit the live website [here](https://james-okafor-lendsqr-fe-test.vercel.app/)
 
 <hr >
 
