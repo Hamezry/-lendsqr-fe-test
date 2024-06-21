@@ -1,0 +1,179 @@
+@use 'sass:math';
+
+$nums: 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12;
+$sizes: 'sm', 'base', 'lg', 'xl', '2xl', '3xl', '4xl', '5xl', '6xl';
+$colors: (
+  'pink': $lendsqr-pink,
+  'orange': $lendsqr-orange,
+  'purple': $lendsqr-purple,
+  'yellow': $lendsqr-yellow,
+  'green': $lendsqr-green,
+  'dark-blue': $lendsqr-dark-blue,
+  'gray': $lendsqr-gray,
+  'red': $lendsqr-red,
+  'primary': $primary-color,
+  'white': #fff,
+  'black': #111,
+  'ash': #efefef,
+);
+$cursors: 'pointer', 'default', 'zoom-in', 'zoom-out', 'grab';
+$alignments: 'center', 'left', 'right';
+$positions: 't', 'b', 'r', 'l';
+
+@function variable-from-string($string) {
+  $variable: unquote($string);
+  @return '$#{$variable}';
+}
+
+@each $num in $nums {
+  .w-#{$num} {
+    width: math.div($num, 4) * 1rem;
+  }
+  .h-#{$num} {
+    height: math.div($num, 4) * 1rem;
+  }
+  .leading-#{$num} {
+    line-height: calc($num * 4) * 1px;
+  }
+  .p-#{$num} {
+    padding: math.div($num, 4) * 1rem;
+  }
+  .pt-#{$num} {
+    padding-top: math.div($num, 4) * 1rem;
+  }
+  .pl-#{$num} {
+    padding-left: math.div($num, 4) * 1rem;
+  }
+  .pr-#{$num} {
+    padding-right: math.div($num, 4) * 1rem;
+  }
+  .pb-#{$num} {
+    padding-bottom: math.div($num, 4) * 1rem;
+  }
+  .py-#{$num} {
+    padding-block: math.div($num, 4) * 1rem;
+  }
+  .px-#{$num} {
+    padding-inline: math.div($num, 4) * 1rem;
+  }
+  .m-#{$num} {
+    margin: math.div($num, 4) * 1rem;
+  }
+  .mt-#{$num} {
+    margin-top: math.div($num, 4) * 1rem;
+  }
+  .mb-#{$num} {
+    margin-bottom: math.div($num, 4) * 1rem;
+  }
+  .my-#{$num} {
+    margin-block: math.div($num, 4) * 1rem;
+  }
+  .mx-#{$num} {
+    margin-inline: math.div($num, 4) * 1rem;
+  }
+  .gap-#{$num} {
+    gap: math.div($num, 4) * 1rem;
+  }
+  .gap-x-#{$num} {
+    row-gap: math.div($num, 4) * 1rem;
+  }
+  .gap-y-#{$num} {
+    column-gap: math.div($num, 4) * 1rem;
+  }
+  .cols-#{$num} {
+    grid-template-columns: repeat(#{$num}, 1fr);
+  }
+  .cols-#{$num}-md {
+    @media (min-width: 769px) {
+      grid-template-columns: repeat(#{$num}, 1fr);
+    }
+  }
+  .cols-#{$num}-lg {
+    @media (min-width: 922px) {
+      grid-template-columns: repeat(#{$num}, 1fr);
+    }
+  }
+  .cols-#{$num}-xl {
+    @media (min-width: 1024px) {
+      grid-template-columns: repeat(#{$num}, 1fr);
+    }
+    .cols-#{$num}-2xl {
+      @media (min-width: 1201px) {
+        grid-template-columns: repeat(#{$num}, 1fr);
+      }
+    }
+  }
+  .border-#{$num} {
+    border-width: $num * 1px;
+  }
+}
+
+@each $curs in $cursors {
+  .cursor-#{$curs} {
+    cursor: #{$curs};
+  }
+}
+
+@each $pos in $positions {
+  .border-#{$pos} {
+    @if ($pos == 'r') {
+      border-right: solid rgba(33, 63, 125, 0.1);
+    }
+    @if ($pos == 'l') {
+      border-left: solid rgba(33, 63, 125, 0.1);
+    }
+    @if ($pos == 't') {
+      border-top: solid rgba(33, 63, 125, 0.1);
+    }
+    @if ($pos == 'b') {
+      border-bottom: solid rgba(33, 63, 125, 0.1);
+    }
+  }
+}
+
+.border {
+  border: solid rgba(33, 63, 125, 0.1);
+}
+
+@each $name, $color in $colors {
+  .text-#{$name} {
+    color: $color;
+  }
+  .bg-#{$name} {
+    background-color: $color;
+  }
+  .bg-#{$name}-light {
+    background-color: rgba($color: $color, $alpha: 0.1);
+  }
+  .border-#{$name} {
+    border-color: $color !important;
+  }
+  .boeder-#{$name}-light {
+    border-color: rgba($color: $color, $alpha: 0.1) !important;
+  }
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 2px;
+  background-color: rgb(233, 230, 230);
+}
+
+.rotate-#{num} {
+  transform: rotate(#{num}deg);
+}
+
+@each $align in $alignments {
+  .text-#{$align} {
+    text-align: #{$align};
+  }
+}
+
+@mixin xl_visible {
+  @media (max-width: 1024px) {
+    display: none;
+  }
+}

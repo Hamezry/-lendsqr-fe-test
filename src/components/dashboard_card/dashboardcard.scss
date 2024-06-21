@@ -1,0 +1,26 @@
+.card {
+  display: grid;
+  gap: 3px;
+  height: max-content;
+}
+._head {
+  display: grid;
+  gap: 0.75rem;
+  border-left: 2px solid rgb(94, 200, 200);
+  p {
+    font-size: 1.5rem;
+  }
+  h5 {
+    &::first-letter {
+      text-transform: uppercase;
+    }
+  }
+}
+
+._subheading {
+  border-top: 1px solid rgb(241, 242, 244);
+  p {
+    font-size: 0.875rem;
+  }
+}
+
