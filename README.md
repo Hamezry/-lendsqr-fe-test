@@ -100,9 +100,9 @@ To carry out automated tests
 
 ### Files
 
-Check out the [Figma](https://www.figma.com/file/ZKILoCoIoy1IESdBpq3GNC/Lendsqr-Frontend-Engineering-Assessment?node-id=5530%3A2342&t=bqLxccP37zPX40rk-0)
+Check out the [Figma](https://www.google.com/url?q=https://www.figma.com/file/ZKILoCoIoy1IESdBpq3GNC/Frontend&sa=D&source=editors&ust=1718978235142938&usg=AOvVaw2YvPRmOuNwlYMf1L6-naQf)
 
-Visit the live website [here](https://hemense-lan-lendsqr-fe-test.netlify.app/)
+Visit the live website [here](james-okafor-lendsqr-fe-test.vercel.app)
 
 <hr >
 
